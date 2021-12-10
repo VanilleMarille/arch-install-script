@@ -3,6 +3,7 @@
 USERNAME=username
 
 arch-chroot /mnt pacman -S budgie-desktop
+arch-chroot /mnt pacman -S mate-terminal
 
 touch /mnt/home/$USERNAME/.xinitrc
 cat <<EOF> /mnt/home/$USERNAME/.xinitrc

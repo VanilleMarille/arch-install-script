@@ -11,7 +11,7 @@ pacman-key --init
 pacman-key --populate archlinux
 pacman -Sy
 
-pacstrap /mnt base base-devel linux linux-firmware lvm2 vim
+pacstrap /mnt base base-devel linux linux-firmware lvm2 vim dhcpcd
 
 genfstab -p /mnt >> /mnt/etc/fstab
 
@@ -24,4 +24,6 @@ genfstab -p /mnt >> /mnt/etc/fstab
 ./xorg.sh
 ./environment.sh
 
+arch-chroot /mnt systemctl enable dhcpcd
 arch-chroot /mnt passwd
+
