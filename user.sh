@@ -1,15 +1,15 @@
 #!/bin/bash
 
-arch-chroot /mnt pacman -Syu zsh
+arch-chroot /mnt pacman -S zsh
 
 echo '%wheel ALL=(ALL) ALL' | sudo EDITOR='tee -a' visudo
 
-USER=username
+USERNAME=username
 
-useradd -m -g users -s /bin/zsh $USER
-passwd $USER
+useradd -m -g users -s /bin/zsh $USERNAME
+passwd $USERNAME
 
-gpasswd -a $USER wheel
+gpasswd -a $USERNAME wheel
 
 
 
