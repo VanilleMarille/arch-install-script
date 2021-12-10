@@ -1,4 +1,4 @@
-sed 's/HOOKS=.*/HOOKS=\"systemd autodetect modconf block lvm2 filesystems keyboard fsck\"/' /mnt/etc/mkinitcpio.conf
+sed -i 's/HOOKS=.*/HOOKS=\"systemd autodetect modconf block lvm2 filesystems keyboard fsck\"/' /mnt/etc/mkinitcpio.conf 
 
 arch-chroot /mnt mkinitcpio -p linux
 arch-chroot /mnt bootctl --path=/boot/ install
