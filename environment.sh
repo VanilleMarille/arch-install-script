@@ -10,8 +10,10 @@ export XDG_CURRENT_DESKTOP=Budgie:GNOME
 exec budgie-desktop
 EOF
 
-touch /mnt/home/$USERNAME/.bashrc
+touch /mnt/home/$USERNAME/.zshrc
 cat <<EOF> /mnt/home/$USERNAME/.zshrc
-if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then exec startx; fi
+if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
+  exec startx
+fi
 EOF
 

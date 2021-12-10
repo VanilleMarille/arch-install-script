@@ -7,6 +7,7 @@ touch /mnt/etc/systemd/system/getty@tty1.service.d/autologin.conf
 cat <<EOF> /mnt/etc/systemd/system/getty@tty1.service.d/autologin.conf
 [Service]
 Type=simple
+ExecStart=
 ExecStart=/sbin/agetty --autologin $USERNAME --noclear %I 38400 linux
 EOF
 
