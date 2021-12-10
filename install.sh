@@ -18,4 +18,8 @@ genfstab -p /mnt >> /mnt/etc/fstab
 
 ./boot.sh
 ./locale.sh
+./host.sh
+./user.sh
+
+
 arch-chroot /mnt passwd
