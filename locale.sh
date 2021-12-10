@@ -8,7 +8,7 @@ echo de_DE.UTF-8 >> /mnt/etc/locale.gen
 
 arch-chroot /mnt localectl set-locale LANG=de_DE.UTF-8
 
-locale-gen
+arch-chroot /mnt locale-gen
 
 exit
 touch /mnt/etc/X11/xorg.conf.d/20-keyboard.conf

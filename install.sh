@@ -17,5 +17,5 @@ genfstab -p /mnt >> /mnt/etc/fstab
 
 
 ./boot.sh
-
+./locale.sh
 arch-chroot /mnt passwd
