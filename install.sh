@@ -20,6 +20,8 @@ genfstab -p /mnt >> /mnt/etc/fstab
 ./locale.sh
 ./host.sh
 ./user.sh
-
+./login.sh
+./xorg.sh
+./environment.sh
 
 arch-chroot /mnt passwd
