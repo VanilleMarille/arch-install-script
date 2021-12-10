@@ -3,7 +3,6 @@
 
 #Preparing/Partitioning drive for Arch Linux installation
 ./partition.sh /dev/vda
-./boot.sh
 
 
 #Configuring Pacman
@@ -15,5 +14,8 @@ pacman -Sy
 pacstrap /mnt base base-devel linux linux-firmware lvm2 vim
 
 genfstab -p /mnt >> /mnt/etc/fstab
+
+
+./boot.sh
 
 arch-chroot /mnt passwd
