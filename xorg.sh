@@ -1,6 +1,6 @@
 #!/bin/bash
 
-arch-chroot /mnt pacman -S xorg-server xorg-xinit
+arch-chroot /mnt pacman -S --noconfirm xorg-server xorg-xinit
 
 mkdir -p /mnt/etc/X11/xorg.conf.d/
 touch /mnt/etc/X11/xorg.conf.d/20-keyboard.conf
