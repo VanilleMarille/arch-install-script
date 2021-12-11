@@ -15,9 +15,10 @@ EOF
 chmod +x /mnt/opt/xrandr.sh
 
 
-sed '/^[Seat:*]/a display-setup-script=/opt/xrandr.sh/g' /etc/lightdm/lightdm.conf
+SeatLine=$(grep -n "\\[Seat:\*\\]$" /mnt/etc/lightdm/lightdm.conf | cut -f1 -d:)
 
-sed '/^[Seat:*]/a session-setup-script=/opt/xrandr.sh/g' /etc/lightdm/lightdm.conf
+sudo sed -i "${SeatLine} -i session-setup-script=/opt/xrandr.sh" /mnt/etc/lightdm/lightdm.conf
 
+sudo sed -i "${SeatLine} -i display-setup-script=/opt/xrandr.sh" /mnt/etc/lightdm/lightdm.conf
 
 
