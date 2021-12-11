@@ -25,5 +25,4 @@ genfstab -p /mnt >> /mnt/etc/fstab
 ./environment/budgie.sh
 
 arch-chroot /mnt systemctl enable dhcpcd
-arch-chroot /mnt passwd
 
