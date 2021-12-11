@@ -20,7 +20,7 @@ genfstab -p /mnt >> /mnt/etc/fstab
 ./locale.sh
 ./host.sh
 ./user.sh
-./login.sh
+./login/lightdm.sh
 ./xorg.sh
 ./environment/budgie.sh
 

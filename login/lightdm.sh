@@ -9,6 +9,8 @@ arch-chroot /mnt systemctl enable lightdm.service
 groupadd autologin
 usermod -a -G autologin $USERNAME
 
+sed -i 's/# autologin-user.*/autologin-user=$USERNAME/' /mnt/etc/lightdm/lightdm.conf 
+
 
 
 
