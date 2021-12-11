@@ -22,7 +22,7 @@ genfstab -p /mnt >> /mnt/etc/fstab
 ./user.sh
 ./login.sh
 ./xorg.sh
-./environment.sh
+./environment/budgie.sh
 
 arch-chroot /mnt systemctl enable dhcpcd
 arch-chroot /mnt passwd
