@@ -2,7 +2,7 @@
 
 USERNAME=username
 
-arch-chroot /mnt pacman -S --noconfirm lxde-common lxsession openbox alacritty 
+arch-chroot /mnt pacman -S --noconfirm lxde  
 
 #touch /mnt/home/$USERNAME/.xinitrc
 #cat <<EOF> /mnt/home/$USERNAME/.xinitrc
