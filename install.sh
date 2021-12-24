@@ -5,7 +5,7 @@ DESK_ENVIRONMENT=lxde
 AUTOLOGIN=true
 
 #Preparing/Partitioning drive for Arch Linux installation
-./partition.sh /dev/vda
+./scripts/partition.sh /dev/vda
 
 
 #Configuring Pacman
