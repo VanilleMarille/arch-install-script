@@ -12,7 +12,7 @@ if [ $2 = true ]; then
 	arch-chroot /mnt groupadd autologin
 	arch-chroot /mnt usermod -a -G autologin $USERNAME
 	sed -i "s/#autologin-user=/autologin-user=$USERNAME/" /mnt/etc/lightdm/lightdm.conf
-	sed -i "s/#autologin-session=/autologin-session=$DESK_ENVIRONMENT/" /mnt/etc/lightdm/lightdm.conf
+#	sed -i "s/#autologin-session=/autologin-session=$DESK_ENVIRONMENT/" /mnt/etc/lightdm/lightdm.conf
 fi
 
 
