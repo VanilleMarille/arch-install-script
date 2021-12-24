@@ -1,7 +1,7 @@
 #!/bin/bash
 
 USERNAME=user
-DESK_ENVIRONMENT=lxde
+DESK_ENVIRONMENT=LXDE
 AUTOLOGIN=true
 
 #Preparing/Partitioning drive for Arch Linux installation
@@ -23,7 +23,7 @@ genfstab -p /mnt >> /mnt/etc/fstab
 ./scripts/locale.sh
 ./scripts/host.sh
 ./scripts/user.sh $USERNAME
-./scripts/login/lightdm.sh $USERNAME $AUTOLOGIN
+./scripts/login/lightdm.sh $USERNAME $AUTOLOGIN $DESK_ENVIRONMENT
 ./scripts/xorg.sh
 ./scripts/environment/$DESK_ENVIRONMENT.sh $USERNAME
 ./scripts/additional.sh
