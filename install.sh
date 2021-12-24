@@ -1,5 +1,8 @@
 #!/bin/bash
 
+USERNAME=user
+DESK_ENVIRONMENT=lxde
+AUTOLOGIN=true
 
 #Preparing/Partitioning drive for Arch Linux installation
 ./partition.sh /dev/vda
@@ -19,10 +22,10 @@ genfstab -p /mnt >> /mnt/etc/fstab
 ./boot.sh
 ./locale.sh
 ./host.sh
-./user.sh
-./login/lightdm.sh
+./user.sh $USERNAME
+./login/lightdm.sh $USERNAME $AUTOLOGIN
 ./xorg.sh
-./environment/budgie.sh
+./environment/$DESK_ENVIRONMENT.sh $USERNAME
 
 arch-chroot /mnt systemctl enable dhcpcd
 

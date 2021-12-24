@@ -1,10 +1,11 @@
 #!/bin/bash
 
+USERNAME=$1
+
 arch-chroot /mnt pacman -S --noconfirm zsh
 
 echo '%wheel ALL=(ALL) ALL' | arch-chroot /mnt sudo EDITOR='tee -a' visudo
 
-USERNAME=username
 
 arch-chroot /mnt useradd -m -g users -s /bin/zsh $USERNAME
 

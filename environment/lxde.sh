@@ -1,6 +1,6 @@
 #!/bin/bash
 
-USERNAME=username
+USERNAME=$1
 
 arch-chroot /mnt pacman -S --noconfirm lxde  
 
