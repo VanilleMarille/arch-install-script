@@ -26,6 +26,7 @@ genfstab -p /mnt >> /mnt/etc/fstab
 ./login/lightdm.sh $USERNAME $AUTOLOGIN
 ./xorg.sh
 ./environment/$DESK_ENVIRONMENT.sh $USERNAME
+./additional.sh
 
 arch-chroot /mnt systemctl enable dhcpcd
 
