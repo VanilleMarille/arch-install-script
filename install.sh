@@ -19,14 +19,14 @@ pacstrap /mnt base base-devel linux linux-firmware lvm2 vim dhcpcd
 genfstab -p /mnt >> /mnt/etc/fstab
 
 
-./boot.sh
-./locale.sh
-./host.sh
-./user.sh $USERNAME
-./login/lightdm.sh $USERNAME $AUTOLOGIN
-./xorg.sh
-./environment/$DESK_ENVIRONMENT.sh $USERNAME
-./additional.sh
+./scripts/boot.sh
+./scripts/locale.sh
+./scripts/host.sh
+./scripts/user.sh $USERNAME
+./scripts/login/lightdm.sh $USERNAME $AUTOLOGIN
+./scripts/xorg.sh
+./scripts/environment/$DESK_ENVIRONMENT.sh $USERNAME
+./scripts/additional.sh
 
 arch-chroot /mnt systemctl enable dhcpcd
 
