@@ -3,9 +3,10 @@
 USERNAME=user
 DESK_ENVIRONMENT=LXDE
 AUTOLOGIN=true
+DRIVE=/dev/vda
 
 #Preparing/Partitioning drive for Arch Linux installation
-./scripts/partition.sh /dev/vda
+./scripts/partition.sh $DRIVE
 
 
 #Configuring Pacman
