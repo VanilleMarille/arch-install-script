@@ -1,6 +1,7 @@
 #!/bin/bash
 
 USERNAME=$1
+DEFAULTFOLDER=true
 
 arch-chroot /mnt pacman -S --noconfirm zsh
 
@@ -21,4 +22,7 @@ echo
 arch-chroot /mnt gpasswd -a $USERNAME wheel
 
 
-
+if [ $DEFAULTFOLDER = true ]; then
+	arch-chroot /mnt pacman -S --noconfirm xdg-user-dirs
+	xdg-user-dirs-update
+fi
