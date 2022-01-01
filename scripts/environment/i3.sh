@@ -5,3 +5,5 @@ arch-chroot /mnt pacman -S --noconfirm kitty feh
 
 #Uncomment for wlan
 #arch-chroot /mnt pacman -S --noconfirm iwd
+#Uncomment for sound
+#arch-chroot /mnt pacman -S --noconfirm pulseaudio pulsemixer
